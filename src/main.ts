@@ -97,7 +97,16 @@ function updateMousePosition(ev: MouseEvent) {
 boxResetEl.addEventListener("click", () => {
     scene.remove(myBox)
     myBox = makeBox(1, 1, 1)
-    myBox.material.setValues({ color: 0x22adfb })
+
+    boxScaleEl.value = "1"
+    boxSpinEl.checked = false
+    boxSpeedEl.value = "1"
+    boxWidthEl.value = "1"
+    boxHeightEl.value = "1"
+    boxDepthEl.value = "1"
+
+    boxColor = 0x22adfb
+
     scene.add(myBox)
 })
 
